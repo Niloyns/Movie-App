@@ -6,192 +6,207 @@ html {
   font-family: Arial, sans-serif;
 }
 
+/* Container for the entire page */
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  width: 80%; /* Set width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding around the container */
 }
 
+/* Navigation bar styles */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px;
-  color: white;
-  position: relative;
+  display: flex; /* Use flexbox for navigation layout */
+  justify-content: space-between; /* Space between logo and search bar */
+  align-items: center; /* Center items vertically */
+  background-color: #333; /* Dark background color */
+  padding: 10px; /* Padding inside the navigation */
+  color: white; /* Text color */
+  position: relative; /* Positioning relative for child elements */
 }
 
+/* Logo styles */
 .logo h1 {
-  margin: 0;
+  margin: 0; /* Remove margin */
 }
 
+/* Search bar styles */
 .searchBar {
-  display: flex;
-  align-items: center;
-  position: relative;
+  display: flex; /* Use flexbox for search bar layout */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Positioning relative for child elements */
 }
 
 .searchBar input {
-  padding: 5px;
-  font-size: 16px;
+  padding: 5px; /* Padding inside the input field */
+  font-size: 16px; /* Font size of input text */
 }
 
 .searchBar button {
-  padding: 5px 10px;
-  margin-left: 5px;
-  background-color: #ff9900;
-  border: none;
-  color: white;
-  cursor: pointer;
+  padding: 5px 10px; /* Padding inside the button */
+  margin-left: 5px; /* Margin to the left of the button */
+  background-color: #ff9900; /* Button background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Autocomplete list styles */
 .autocomplete-items {
-  position: absolute;
-  top: 40px;
-  width: 100%;
-  max-height: 150px;
-  overflow-y: auto;
-  background-color: white;
-  border: 1px solid #ccc;
-  z-index: 1000;
+  position: absolute; /* Absolute positioning for autocomplete list */
+  top: 40px; /* Distance from top */
+  width: 100%; /* Full width */
+  max-height: 150px; /* Maximum height of autocomplete list */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: white; /* Background color */
+  border: 1px solid #ccc; /* Border color */
+  z-index: 1000; /* Set z-index for stacking order */
 }
 
 .autocomplete-item {
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 10px; /* Padding inside each autocomplete item */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .autocomplete-item:hover {
-  background-color: #e9e9e9;
+  background-color: #e9e9e9; /* Background color on hover */
 }
 
+/* Content section styles */
 .content {
-  display: flex;
-  margin-top: 20px;
+  display: flex; /* Use flexbox for content layout */
+  margin-top: 20px; /* Margin on top */
 }
 
+/* Grid layout for displaying movie cards */
 .cardGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  flex: 3;
+  display: grid; /* Use CSS grid for movie cards */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Responsive grid columns */
+  gap: 20px; /* Gap between grid items */
+  flex: 3; /* Take up 3/4 of the available space */
 }
 
+/* Sidebar styles */
 .sidebar {
-  flex: 1;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
-  height: calc(100vh - 150px);
-  overflow-y: auto;
+  flex: 1; /* Take up 1/4 of the available space */
+  padding: 20px; /* Padding inside the sidebar */
+  background-color: #f4f4f4; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  margin-left: 20px; /* Margin to the left of the sidebar */
+  height: calc(
+    100vh - 150px
+  ); /* Calculate height minus navigation and padding */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .sidebar h2 {
-  text-align: center;
+  text-align: center; /* Center-align sidebar heading */
 }
 
+/* Individual movie card styles */
 .movieCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex; /* Use flexbox for movie card layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  background-color: #f4f4f4; /* Background color */
+  padding: 20px; /* Padding inside movie card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box shadow */
 }
 
 .movieCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* Move card up on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Larger box shadow on hover */
 }
 
 .movieCard img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+  width: 100%; /* Full width for movie poster image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
 }
 
 .cardText {
-  text-align: center;
+  text-align: center; /* Center-align text inside movie card */
 }
 
 .cardText h1 {
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 18px; /* Font size for movie title */
+  margin: 10px 0; /* Margin top and bottom */
 }
 
 .cardText p {
-  margin: 5px 0;
+  margin: 5px 0; /* Margin top and bottom for paragraph */
 }
 
 .cardText span {
-  font-weight: bold;
+  font-weight: bold; /* Bold font weight for year */
 }
 
 .cardText button {
-  padding: 5px 10px;
-  background-color: #ff9900;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  padding: 5px 10px; /* Padding inside button */
+  background-color: #ff9900; /* Button background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 10px; /* Margin on top */
+  transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .cardText button:hover {
-  background-color: #ff7700;
+  background-color: #ff7700; /* Darker background color on hover */
 }
 
+/* Individual favorite movie card styles */
 .favoriteCard {
-  display: flex;
-  align-items: center;
-  background-color: #f4f4f4;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex; /* Use flexbox for favorite card layout */
+  align-items: center; /* Center items vertically */
+  background-color: #f4f4f4; /* Background color */
+  padding: 10px; /* Padding inside favorite card */
+  margin: 10px 0; /* Margin top and bottom */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box shadow */
 }
 
 .favoriteCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Move card up on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Larger box shadow on hover */
 }
 
 .favoriteCard img {
-  width: 50px;
-  height: auto;
-  border-radius: 10px;
-  margin-right: 10px;
+  width: 50px; /* Set width for movie poster image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  margin-right: 10px; /* Margin to the right of the image */
 }
 
 .favoriteCard .cardText {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: flex; /* Use flexbox for card text layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
 }
 
 .favoriteCard .cardText h1 {
-  font-size: 16px;
-  margin: 0;
+  font-size: 16px; /* Font size for movie title */
+  margin: 0; /* Remove margin */
 }
 
 .deleteBtn {
-  padding: 3px 7px;
-  background-color: #ff0000;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-top: 5px;
-  font-size: 12px;
-  transition: background-color 0.3s;
+  padding: 3px 7px; /* Padding inside delete button */
+  background-color: #ff0000; /* Button background color */
+  border: none; /* No border */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 5px; /* Margin on top */
+  font-size: 12px; /* Font size for button text */
+  transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .deleteBtn:hover {
-  background-color: #cc0000;
+  background-color: #cc0000; /* Darker background color on hover */
 }
