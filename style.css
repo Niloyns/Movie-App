@@ -57,7 +57,7 @@ nav {
   width: 100%; /* Full width */
   max-height: 150px; /* Maximum height of autocomplete list */
   overflow-y: auto; /* Enable vertical scrolling */
-  background-color: white; /* Background color */
+  background-color: rgb(135, 135, 135); /* Background color */
   border: 1px solid #ccc; /* Border color */
   z-index: 1000; /* Set z-index for stacking order */
 }
@@ -69,7 +69,7 @@ nav {
 }
 
 .autocomplete-item:hover {
-  background-color: #e9e9e9; /* Background color on hover */
+  background-color: #ff9d1c; /* Background color on hover */
 }
 
 /* Content section styles */
@@ -209,4 +209,47 @@ nav {
 
 .deleteBtn:hover {
   background-color: #cc0000; /* Darker background color on hover */
+}
+
+/* CSS for modal/popup */
+
+/* Styling for the modal container */
+.modal {
+  display: none; /* Hide modal by default */
+  position: fixed; /* Fixed position */
+  z-index: 1; /* Ensure modal is on top of other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if content exceeds viewport */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+/* Styling for the modal content */
+.modal-content {
+  background-color: #fefefe; /* White background */
+  margin: 15% auto; /* Center modal vertically and offset from top */
+  padding: 20px; /* Padding inside the modal */
+  border: 1px solid #888; /* Border around modal */
+  width: 80%; /* Width of modal */
+  max-width: 700px; /* Maximum width of modal */
+  position: relative; /* Relative positioning for child elements */
+}
+
+/* Styling for the close button */
+.close {
+  color: #aaa; /* Light gray text */
+  float: right; /* Float to the right */
+  font-size: 28px; /* Large font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Cursor pointer on hover */
+}
+
+/* Hover and focus styles for the close button */
+.close:hover,
+.close:focus {
+  color: black; /* Black text on hover or focus */
+  text-decoration: none; /* No underline */
+  cursor: pointer; /* Cursor pointer on hover or focus */
 }
